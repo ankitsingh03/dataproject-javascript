@@ -1,8 +1,9 @@
+// Plot a chart of number of umpires by in IPL by country.
 fetch('assets/foreign_umpire_analysis.json')
   .then(response => response.json())
   .then(data => {
-      let x = Object.keys(data);
-      let y = Object.values(data);
+      let country = Object.keys(data);
+      let count_umpire = Object.values(data);
 
       Highcharts.chart('container_1', {
         chart: {
@@ -15,7 +16,7 @@ fetch('assets/foreign_umpire_analysis.json')
             text: 'chart of the total runs scored by each teams over the history of IPL.'
         },
         xAxis: {
-            categories: x
+            categories: country
         },
         yAxis: {
             labels: {
@@ -27,7 +28,7 @@ fetch('assets/foreign_umpire_analysis.json')
         },
         series: [{
             name: 'Country',
-            data: y
+            data: count_umpire
         }],
         responsive: {
             rules: [{
@@ -68,11 +69,12 @@ fetch('assets/foreign_umpire_analysis.json')
 });
 
 
+// plot the total runs scored by every batsman playing for Royal Challengers Bangalore over the history of IPL.
 fetch('assets/top_batsman_for_royal_challengers_bangalore.json')
   .then(response => response.json())
   .then(data => {
-      let x = Object.keys(data);
-      let y = Object.values(data);
+      let batsman = Object.keys(data);
+      let runs = Object.values(data);
       
       Highcharts.chart('container_2', {
         chart: {
@@ -85,7 +87,7 @@ fetch('assets/top_batsman_for_royal_challengers_bangalore.json')
             text: 'plot the total runs scored by every batsman playing for Royal Challengers Bangalore over the history of IPL.'
         },
         xAxis: {
-            categories: x
+            categories: batsman
         },
         yAxis: {
             labels: {
@@ -97,7 +99,7 @@ fetch('assets/top_batsman_for_royal_challengers_bangalore.json')
         },
         series: [{
             name: 'Batsman Playing for Royal Challengers Bangalore',
-            data: y
+            data: runs
         }],
         responsive: {
             rules: [{
@@ -138,11 +140,12 @@ fetch('assets/top_batsman_for_royal_challengers_bangalore.json')
 });
 
 
+// Plot a chart of the total runs scored by each teams over the history of IPL. 
 fetch('assets/total_runs_scored_by_team.json')
   .then(response => response.json())
   .then(data => {
-      let x = Object.keys(data);
-      let y = Object.values(data);
+      let teams = Object.keys(data);
+      let runs = Object.values(data);
 
       Highcharts.chart('container_3', {
         chart: {
@@ -155,7 +158,7 @@ fetch('assets/total_runs_scored_by_team.json')
             text: 'chart of the total runs scored by each teams over the history of IPL.'
         },
         xAxis: {
-            categories: x
+            categories: teams
         },
         yAxis: {
             labels: {
@@ -167,7 +170,7 @@ fetch('assets/total_runs_scored_by_team.json')
         },
         series: [{
             name: 'Teams',
-            data: y
+            data: runs
         }],
         responsive: {
             rules: [{
@@ -207,7 +210,7 @@ fetch('assets/total_runs_scored_by_team.json')
     });
 });
 
-// stacked chart
+// Stacked chart of matches played by team by season
 fetch('assets/stacked_chart_of_matches_played_by_team_by_season.json')
   .then(response => response.json())
   .then(data => {

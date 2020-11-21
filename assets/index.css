@@ -1,3 +1,4 @@
+/* first graph */
 #container_1 {
 	height: 500px;
 	min-width: 310px;
@@ -5,6 +6,7 @@
     width: 100%;
 }
 
+/* second graph */
 #container_2 {
 	height: 500px;
 	min-width: 310px;
@@ -12,6 +14,7 @@
     width: 100%;
 }
 
+/* third graph */
 #container_3 {
 	height: 500px;
 	min-width: 310px;
@@ -19,6 +22,7 @@
     width: 100%;
 }
 
+/* fourth graph */
 .highcharts-figure, .highcharts-data-table table {
     width: 800px;
     max-width: 100%;
@@ -57,6 +61,7 @@
     background: #f1f7ff;
 }
 
+/* flex .box */
 .container {
     display: flex;
     position: relative;
@@ -70,8 +75,4 @@
     margin: 3em 6em;
     padding: 1em;
     border-radius: 1em;
-}
-
-.bold {
-    text-align: center;
 }

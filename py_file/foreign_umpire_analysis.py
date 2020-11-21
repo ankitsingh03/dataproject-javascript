@@ -25,6 +25,8 @@ if __name__ == "__main__":
     sort_data = {k: v for k, v in sorted(data.items(),
                  key=lambda item: item[1], reverse=True)
                  }
+
+    # Pushing all the required data to json file
     with open(
         "../assets/foreign_umpire_analysis.json", "w"
               ) as outfile:

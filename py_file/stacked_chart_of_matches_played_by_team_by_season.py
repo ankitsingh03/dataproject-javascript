@@ -25,10 +25,9 @@ def data_collection():
         for i in q:
             total[p] = {i: q.count(i) for i in q}
 
-    # return total, list(teams)
     year = sorted(total.keys())
 
-    # firmation dict {team_name: [data over the year]}
+    # formation of dict {team_name: [data over the year]}
     team_data = defaultdict(list)
     for i in teams:
         for j in year:
@@ -42,6 +41,8 @@ def data_collection():
 
 if __name__ == "__main__":
     data = data_collection()
+
+    # Pushing all the required data to json file
     with open(
         "../assets/stacked_chart_of_matches_played_by_team_by_season.json", "w"
               ) as outfile:

@@ -26,6 +26,8 @@ if __name__ == "__main__":
     sort_data = {k: v for k, v in sorted(data.items(),
                  key=lambda item: item[1], reverse=True)[:10]
                  }
+
+    # Pushing all the required data to json file
     with open(
         "../assets/top_batsman_for_royal_challengers_bangalore.json", "w"
               ) as outfile:
