@@ -14,7 +14,8 @@ Python version should be more then 3.5+
 
 ## How To Run
 1. It is deployed on [Heroku](https://data-plot-js.herokuapp.com/)
-1. Download the zip file and extract it in your system. Open `index.html` file in your browser.
+2. Run this HTTP Server at the localhost address **http://127.0.0.1:8000** in your terminal. Path should be in project directory.
+3. Download the zip file and extract it in your system. Open `index.html` file in your browser.
 
 #### If your graph is not working or .json file have no data in it then follow this.
 1. open the `py_file`
